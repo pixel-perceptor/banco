@@ -20,17 +20,24 @@ body {
   line-height: 1.6;
 }
 
+/* Utils */
+.container {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Header */
 .containerBlanco {
   background: #ffffff;
   border-radius: 0% 0% 0% 0%;
-  padding-bottom: 95px;
+  padding-bottom: 20vh;
 }
 
 .bannerAzul {
   background: linear-gradient(to right, #004c57, #00686e);
   border-radius: 0px 0px 60px 60px;
-  height: 450px;
+  height: 50vh;
 }
 
 .header {
@@ -52,11 +59,11 @@ body {
   text-decoration: none;
   color: white;
   font-size: 13px;
+  transition: 0.4s;
 }
 #MiCuenta:hover {
   font-size: 15px;
   padding: 10px;
-  transition: 0.4s;
 }
 #icono-perfil {
   width: 30px;
@@ -80,17 +87,17 @@ body {
 
 #contenedor-texto {
   background-color: #ffffff;
-  width: 750px;
+  width: 100%;
+  max-width: 750px;
   height: 150px;
-  /* box-shadow: desplazamientoX desplazamientoY desenfoque extensión color; */
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
   border-radius: 40px;
   position: absolute;
   z-index: 2;
-  right: 300px;
+  right: 50%;
   top: 380px;
+  transform: translateX(50%);
 }
-
 
 .hero-img {
   width: 450px;
@@ -121,11 +128,12 @@ body {
   text-decoration: none;
   display: inline-block;
   margin-top: 15px;
+  transition: all ease-in-out 0.5s;
 }
 .btn:hover {
-  padding: 15px 25px 15px 25px;
-  font-size: 18px;
-  transition: 0.5s;
+  /* padding: 15px 25px 15px 25px; */
+  /* font-size: 18px; */
+  transform: scale(1.05);
   background-color: #038fa5;
 }
 
@@ -135,7 +143,6 @@ body {
   text-align: center;
   justify-items: center;
   align-self: center;
-  
 }
 
 .features-grid {
@@ -164,15 +171,10 @@ body {
 /* CTA */
 
 .contenedorTarjeta {
-  justify-items: center;
-  width:850px ;
   position: relative;
-  left: 300px;
-  display: flexbox;
 }
 .fondoblancoCta {
-  height: 300px;
-  justify-items: center;
+  /* height: 300px; */
   padding-bottom: 90px;
   align-content: center;
   justify-items: center;
@@ -186,11 +188,15 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  margin: 60px;
+  /* margin: 0 auto; */
   position: absolute;
   z-index: 2;
-  top: -100px;
+  top: -20px;
+  right: 50%;
+  transform: translateX(50%);
 }
+
+
 
 #tarjeta-cta {
   width: 400px;
@@ -217,20 +223,21 @@ body {
   background-color: #00b8a9;
   font-size: 15px;
   padding: 10px 15px 10px 15px;
+  transition: all ease-in-out 0.25s;
 }
 
 .cta .btn:hover {
-  padding: 15px 19px 15px 19px;
-  font-size: 18px;
-  transition: 0.5s;
+  /* padding: 15px 19px 15px 19px; */
+  transform: scale(1.05);
   background-color: #038fa5;
 }
 
 .fondoAzulCta {
   background-color: #004c57;
   border-radius: 60px;
-  width: 850px;
-  height: 200px;
+  width: 100%;
+  max-width: 850px;
+  height: 250px;
   /* box-shadow: desplazamientoX desplazamientoY desenfoque extensión color; */
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
   align-items: center;
@@ -287,4 +294,33 @@ body {
 
 .footer-columns li {
   margin-bottom: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  /* Hero */
+
+  .bannerAzul {
+    height: 100vh;
+  }
+
+  .hero-img{
+    width: 300px;
+  }
+  #contenedor-texto {
+    width: 95%;
+    top: 72%;
+  }
+
+  .bannerInicial {
+    flex-direction: column;
+  }
+
+  .fondoAzulCta {
+    height: 370px;
+  }
+  .cta {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }
