@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="./style/inciosesion.css" />
+  </head>
+  <body>
+    <!-- Fondo banner-->
+    <!-- NAV -->
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <img src="./src/BSS blanco .svg" alt="Logo banco en azul" />
+        </div>
+        <div class="perfil">
+          <a id="MiCuenta" href="./index.html">Regresar </a>
+          <img
+            id="icono-back"
+            src="./src/icon Back.svg"
+            alt="Icono de perfil"
+          />
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <!-- Registro usuario nuevo -->
+      <div id="Registro">
+        <div class="contenedor-blanco">
+          <form class="campoCss">
+            <h2>Nuevo Registro</h2>
+            <label for="usuario" >Nombre</label>
+            <input type="text" id="usuarioNuevo" name="usuario" required />
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasenaNueva" name="contrasena" required />
+
+            <button type="submit" id="botonRegistro">Ingresar</button>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- Inicio de sesion -->
+      <div id="incioSesion" class="oculto">
+        <div class="contenedor-blanco">
+          <form class="campoCss">
+            <h2>Iniciar sesión</h2>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required />
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required />
+
+            <button type="submit" id="botonInicioSesion">Ingresar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="./js/modales.js"></script>
+  </body>
+</html>
